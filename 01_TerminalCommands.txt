@@ -1,0 +1,10 @@
+# https://www.r-project.org/からRをダウンロードする．
+# https://www.rstudio.com/products/rstudio/からR Studio をダウンロードする．
+# 以下の操作は、上記の作業を済ませていることを前提条件とする．
+
+# Macのユーティリティからターミナルを起動する．
+# xcodeをインストールする
+xcode-select --install
+
+# xcodeのバージョンを表示させ、正常にインストールされたことを確認する．
+xcode-select -v
