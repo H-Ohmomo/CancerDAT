@@ -121,7 +121,7 @@ est_sex_res$predictedSex <- factor(est_sex_res$predictedSex, levels = c("F", "M"
 est_sex_res
 identical(targets$SampleID, rownames(sex))
 
-# targetsにおさめられているSampleIDと sexにおさめられているサンプル名が一致しているか作図して確認する．
+#サンプルシートの性別と推定された性別が一致するか作図して確認する．
 pdf("predictedSex.pdf")
 plot(
 	x = est_sex_res$xMed, xlab = "xMed",
