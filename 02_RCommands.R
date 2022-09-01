@@ -300,7 +300,7 @@ ftable(cov2[,c("Sample_Group","Sample_Sex")])
 ##横軸にPC1を、縦軸にPC2でPCAを描画する．
 tmp1 = na.omit(beta2[,c(2:ncol(beta2))])
 sd = apply(tmp1, 1, sd)
-tmp2 = tmp1[sd 0,]
+tmp2 = tmp1[sd>0,]
 pca = prcomp(t(tmp2),scale=T)
 tmp3 = as.data.frame(t(summary(pca)$importance))[,c("Proportion of Variance","Cumulative Proportion")]
 tmp4 = as.data.frame(pca$x)
