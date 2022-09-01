@@ -47,13 +47,13 @@ RGset <- read.metharray.exp(targets=targets, force=TRUE)
 RGset
 save(RGset,file="02_E-GEOD-61441_RGset.RData")
 
-# ② データの正 化およびβ値 メチル化率 を算出する
+# ② データの正規化およびβ値(メチル化率)を算出する
 mset.noob <- preprocessNoob(RGset)
 save(mset.noob, file = "03_E-GEOD-61441_mset.RData")
 beta.noob <- getBeta(mset.noob)
 save(beta.noob, file = "04_E-GEOD-61441_beta.RData")
 
-# ③ コントロールプローブの蛍光強度を取得，Principal Conponent Analysis，はずれ値サンプルがないかを確認
+# ③ コントロールプローブの蛍光強度を取得，Principal Component Analysis，はずれ値サンプルがないかを確認
 ## コントロールプローブの情報を取り出し、まとめる．
 ctrls <- getProbeInfo(RGset, type = "Control")
 ctrls <- ctrls[ctrls$Address %in% featureNames(RGset),]
